@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE orarend SYSTEM "MM_orarend.dtd">
+
+<orarend>
+
+	<ora id="e001" tipus = "előadás">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>12</tol>
+			<ig>14</ig>
+		</idopont>
+		<helyszin>XXXVII Előadó</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>BP</szak>
+	</ora>
+	
+	<ora id="e002" tipus="gyakorlat">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>Kedd</nap>
+			<tol>14</tol>
+			<ig>16</ig>
+		</idopont>
+		<helyszin>Info 101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>BP</szak>
+	</ora>
+	
+	
+	<ora id="e003" tipus="előadás">
+
+		<targy>Szoftvertechnologia</targy>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>08</tol>
+			<ig>12</ig>
+		</idopont>
+		<helyszin>A1 218</helyszin>
+		<oktato>Dr. Mileff Péter</oktato>
+		<szak>BP</szak>
+	</ora>
+	
+	<ora id="e004" tipus="előadás">
+	
+		<targy>Vállalati Információs Rendszerek</targy>
+		<idopont>
+			<nap>Szerda</nap>
+			<tol>16</tol>
+			<ig>18</ig>
+		</idopont>
+		<helyszin>Info 202</helyszin>
+		<oktato>Dr. Sasvári Péter</oktato>
+		<szak>BP</szak>
+	</ora>
+	
+	
+	<ora id="e005" tipus="gyakorlat">
+
+	<targy>Vállalati Információs Rendszerek</targy>
+	<idopont>
+			<nap>Szerda</nap>
+			<tol>18</tol>
+			<ig>20</ig>
+		</idopont>
+		<helyszin>Info 202</helyszin>
+		<oktato>Dr. Sasvári Péter</oktato>
+		<szak>BP</szak>
+	</ora>
+
+</orarend>

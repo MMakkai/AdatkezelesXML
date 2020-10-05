@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE iskola SYSTEM "iskola.dtd">
+
+<iskola>
+	<tanar kod="e001">
+		<nev>Toth Lajos</nev>
+		<szak>Történelem</szak>
+	</tanar>
+	
+	<tanar kod="e002">
+		<nev>Szabó László</nev>
+		<szak>Matek</szak>
+	</tanar>
+	
+	<tantargy kod="e003" oktato="e001">
+		<tnev>Történelem</tnev>
+		<osztaly>9A</osztaly>
+	</tantargy>
+
+</iskola>
