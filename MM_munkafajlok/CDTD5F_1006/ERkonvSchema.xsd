@@ -7,12 +7,48 @@
       <xs:element name="a" type="xs:string"/>
       <xs:element name="b">
       	<xs:complexType>
-			      	
+			<xs:sequence>
+				<xs:element name="value" maxOccurs="unbounded"></xs:element>
+				<xs:element name="x"></xs:element>
+				<xs:element name="y"></xs:element>
+			</xs:sequence>
       	</xs:complexType>
       </xs:element>
       <xs:element name="c" type="xs:string"/>
     </xs:sequence>
+    <xs:attribute name="aid" type="xs:string" use="required"></xs:attribute>
   </xs:complexType>
 </xs:element>
+
+<xs:element name="B">
+	<xs:complexType>
+    	<xs:sequence>
+      		<xs:element name="a" type="xs:string" />
+      		<xs:element name="b">
+      			<xs:complexType>
+      				<xs:sequence>
+      					<xs:element name="x"></xs:element>
+						<xs:element name="y"></xs:element>
+      				</xs:sequence>
+      			</xs:complexType>
+      		</xs:element>
+      	</xs:sequence>
+      	<xs:attribute name="bid" type="xs:string" use="required"></xs:attribute>
+      	<xs:attribute name="aidref" type="xs:string" use="required"></xs:attribute>
+      	<xs:attribute name="cidref" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:element name="C">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="a" type="xs:string" />
+      		<xs:element name="b" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="cid" type="xs:string" use="required"></xs:attribute>
+	</xs:complexType>
+</xs:element>
+
 
 </xs:schema>

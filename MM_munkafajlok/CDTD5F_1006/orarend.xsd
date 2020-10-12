@@ -1,32 +1,33 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name="orarend">
-  <xs:complexType>
- 	 <xs:sequence>
- 	 	<xs:element name="ora" maxOccurs="unbounded">
- 	 		<xs:complexType>
+<xs:complexType name="idoponttype">
+ 	 		<xs:sequence>
+ 	 				<xs:element name="nap" type="xs:string"></xs:element>
+ 	 				<xs:element name="tol" type="xs:string"></xs:element>
+ 					<xs:element name="ig" type="xs:string"></xs:element>
+ 			</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="oratype">
  	 			<xs:sequence>
  	 				<xs:element name="targy" type="xs:string"></xs:element>
- 	 				<xs:element name="idopont">
- 	 					<xs:complexType>
- 	 						<xs:sequence>
- 	 							<xs:element name="nap" type="xs:string"></xs:element>
- 	 							<xs:element name="tol" type="xs:string"></xs:element>
- 	 							<xs:element name="ig" type="xs:string"></xs:element>
- 	 						</xs:sequence>
- 	 					</xs:complexType>
- 	 				</xs:element>
+ 	 				<xs:element name="idopont" type="idoponttype"></xs:element>
  	 				<xs:element name="helyszin" type="xs:string"></xs:element>
  	 				<xs:element name="oktato" type="xs:string"></xs:element>
  	 				<xs:element name="szak" type="xs:string"></xs:element>
  	 			</xs:sequence>
  	 			<xs:attribute name="id" type="xs:string" use="required"></xs:attribute>
- 	 			<xs:attribute name="tipus" type="xs:string"></xs:attribute>
- 	 		</xs:complexType>
+	 			<xs:attribute name="tipus" type="xs:string"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="orarendtype">
+ 	 <xs:sequence>
+ 	 	<xs:element name="ora" type="oratype" maxOccurs="unbounded">
  	 	</xs:element>
  	 </xs:sequence>
   </xs:complexType>
-</xs:element>
+
+<xs:element name="orarend" type="orarendtype"></xs:element>
 
 </xs:schema>
