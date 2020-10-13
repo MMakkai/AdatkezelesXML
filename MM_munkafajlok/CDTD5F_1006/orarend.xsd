@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:complexType name="idoponttype">
+<xs:complexType name="idopontType">
  	 		<xs:sequence>
  	 				<xs:element name="nap" type="xs:string"></xs:element>
  	 				<xs:element name="tol" type="xs:string"></xs:element>
@@ -9,10 +9,10 @@
  			</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="oratype">
+<xs:complexType name="oraType">
  	 			<xs:sequence>
  	 				<xs:element name="targy" type="xs:string"></xs:element>
- 	 				<xs:element name="idopont" type="idoponttype"></xs:element>
+ 	 				<xs:element name="idopont" type="idopontType"></xs:element>
  	 				<xs:element name="helyszin" type="xs:string"></xs:element>
  	 				<xs:element name="oktato" type="xs:string"></xs:element>
  	 				<xs:element name="szak" type="xs:string"></xs:element>
@@ -21,13 +21,13 @@
 	 			<xs:attribute name="tipus" type="xs:string"></xs:attribute>
 </xs:complexType>
 
-<xs:complexType name="orarendtype">
+<xs:complexType name="orarendType">
  	 <xs:sequence>
- 	 	<xs:element name="ora" type="oratype" maxOccurs="unbounded">
+ 	 	<xs:element name="ora" type="oraType" maxOccurs="unbounded">
  	 	</xs:element>
  	 </xs:sequence>
   </xs:complexType>
 
-<xs:element name="orarend" type="orarendtype"></xs:element>
+<xs:element name="orarend" type="orarendType"></xs:element>
 
 </xs:schema>
