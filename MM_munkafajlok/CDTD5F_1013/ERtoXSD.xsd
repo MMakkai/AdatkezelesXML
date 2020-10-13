@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="fo">
+		<xs:complexType>
+			<xs:sequence>
+			
+				<xs:element name="A" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="b" type="xs:string"/>
+							<xs:element name="c" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="a1" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="B" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="b">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="x" type="xs:string"/>
+										<xs:element name="y" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="b1" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="C" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="b" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="c1" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="AB" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="c" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="ab1" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="BC" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:attribute name="bc1" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="K1">
+			<xs:selector xpath="A"/>
+			<xs:field xpath="@a1"></xs:field>
+		</xs:key>
+		<xs:key name="K2">
+			<xs:selector xpath="B"/>
+			<xs:field xpath="@b1"></xs:field>
+		</xs:key>
+		
+		<xs:keyref refer="K1" name="K11">
+			<xs:selector xpath="AB"></xs:selector>
+			<xs:field xpath="@ab1"></xs:field>
+		</xs:keyref>
+		<xs:keyref refer="K2" name="K21">
+			<xs:selector xpath="BC"></xs:selector>
+			<xs:field xpath="@bc1"></xs:field>
+		</xs:keyref>
+	</xs:element>
+</xs:schema>
