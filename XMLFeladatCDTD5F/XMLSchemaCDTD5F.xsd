@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+    <xs:element name="videojatekaruhaz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="videojatek" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev" type="xs:string"></xs:element>
+                            <xs:element name="genre" maxOccurs="unbounded" type="xs:string"></xs:element>
+                            <xs:element name="kiado" type="xs:string"></xs:element>
+                            <xs:element name="ar" type="xs:int"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="gid" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="vevo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev" type="xs:string"></xs:element>
+                            <xs:element name="szallitasi_cim">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="iranyitoszam" type="xs:string"></xs:element>
+                                        <xs:element name="telepules" type="xs:string"></xs:element>
+                                        <xs:element name="ut" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                             <xs:element name="telefonszam" type="xs:string"></xs:element>
+                            <xs:element name="email" minOccurs="0" type="xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="vid" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="bolt" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="varos" type="xs:string"></xs:element>
+                            <xs:element name="nyitvatartas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tol" type="xs:string"></xs:element>
+                                        <xs:element name="ig" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="dolgozok_szama" type="xs:int"></xs:element>
+                            <xs:element name="videojatek" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="jatekKulcs" type="xs:string" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="bid" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="vasarlas" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+							<xs:element name="termek" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="jatekKulcs" use="required" type="xs:string"></xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="osszeg" type="xs:int"></xs:element>
+                            <xs:element name="atveteli_mod" type="xs:string"></xs:element>
+							<xs:element name="datum" type="xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="pid" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="vevoid" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="jatekKulcs">
+            <xs:selector xpath="videojatek"></xs:selector>
+            <xs:field xpath="@gid"></xs:field>
+        </xs:key>
+        <xs:key name="vevoKulcs">
+            <xs:selector xpath="vevo"></xs:selector>
+            <xs:field xpath="@vid"></xs:field>
+        </xs:key>
+        <xs:key name="boltKulcs">
+            <xs:selector xpath="bolt"></xs:selector>
+            <xs:field xpath="@bid"></xs:field>
+        </xs:key>
+        <xs:key name="vasarlasKulcs">
+            <xs:selector xpath="vasarlas"></xs:selector>
+            <xs:field xpath="@pid"></xs:field>
+        </xs:key>
+        <xs:keyref refer="jatekKulcs" name="vasarlasJatekRef">
+            <xs:selector xpath="vasarlas/termek"></xs:selector>
+            <xs:field xpath="@jatekKulcs"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="vevoKulcs" name="vasarlasVevoRef">
+            <xs:selector xpath="vasarlas"></xs:selector>
+            <xs:field xpath="@vevoid"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="jatekKulcs" name="boltJatekRef">
+            <xs:selector xpath="bolt/videojatek"></xs:selector>
+            <xs:field xpath="@jatekKulcs"></xs:field>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

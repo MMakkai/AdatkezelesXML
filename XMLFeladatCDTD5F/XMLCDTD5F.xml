@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<videojatekaruhaz 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 		xsi:noNamespaceSchemaLocation="XMLSchemaCDTD5F.xsd">
+
+	<videojatek gid="001">
+		<nev>Assassin's Creed Valhalla</nev>
+		<genre>Akció</genre>
+		<genre>RPG</genre>
+		<genre>Historical</genre>
+		<kiado>Ubisoft</kiado>
+		<ar>20000</ar>
+	</videojatek>
+	
+	<videojatek gid="002">
+		<nev>Witcher 3 Wild Hunt</nev>
+		<genre>Akció</genre>
+		<genre>RPG</genre>
+		<genre>Fantasy</genre>
+		<kiado>CD Projekt Red</kiado>
+		<ar>10000</ar>
+	</videojatek>
+	
+	<videojatek gid="003">
+		<nev>Age of Empires 3 Definitive Edition</nev>
+		<genre>RTS</genre>
+		<genre>Historical</genre>
+		<kiado>Xbox Game Studios</kiado>
+		<ar>7000</ar>
+	</videojatek>
+	
+	<videojatek gid="004">
+		<nev>World of Warcraft Shadowlands</nev>
+		<genre>MMORPG</genre>
+		<kiado>Blizzard</kiado>
+		<ar>14000</ar>
+	</videojatek>
+	
+	<videojatek gid="005">
+		<nev>Cyberpunk 2077</nev>
+		<genre>FPS</genre>
+		<genre>Akció</genre>
+		<genre>RPG</genre>
+		<kiado>CD Projekt Red</kiado>
+		<ar>21000</ar>
+	</videojatek>
+	
+	
+	
+	<vevo vid="101">
+		<nev>Veres Péter</nev>
+		<szallitasi_cim>
+			<iranyitoszam>3535</iranyitoszam>
+			<telepules>Miskolc</telepules>
+			<ut>Árpád u.</ut>
+		</szallitasi_cim>
+		<telefonszam>+36209852483</telefonszam>
+		<email>verespeti35@gmail.com</email>
+	</vevo>
+	
+	<vevo vid="102">
+		<nev>Szabó Roland</nev>
+		<szallitasi_cim>
+			<iranyitoszam>1026</iranyitoszam>
+			<telepules>Budapest</telepules>
+			<ut>Lupény u.</ut>
+		</szallitasi_cim>
+		<telefonszam>+36208934619</telefonszam>
+		<email>szaboroli23@gmail.com</email>
+	</vevo>
+	
+	<vevo vid="103">
+		<nev>Szabó Valentin</nev>
+		<szallitasi_cim>
+		 	<iranyitoszam>3531</iranyitoszam>
+			<telepules>Miskolc</telepules>
+			<ut>Thököly Imre u.</ut>
+		</szallitasi_cim>
+		<telefonszam>+36701111112</telefonszam>
+	</vevo>
+	
+	<vevo vid="104">
+		<nev>Balog Flóra</nev>
+		<szallitasi_cim>
+			<iranyitoszam>2112</iranyitoszam>
+			<telepules>Veresegyház</telepules>
+			<ut>Sportföld u.</ut>
+		</szallitasi_cim>
+		<telefonszam>+36304253640</telefonszam>
+		<email>bflora01@gmail.com</email>
+	</vevo>
+	
+	<vevo vid="105">
+		<nev>Bodnár Attila</nev>
+		<szallitasi_cim>
+			<iranyitoszam>6791</iranyitoszam>
+			<telepules>Szeged</telepules>
+			<ut>Körte u.</ut>
+		</szallitasi_cim>
+		<telefonszam>+36704959699</telefonszam>
+		<email>bodnarat48@gmail.com</email>
+	</vevo>
+	
+	
+	<bolt bid="201">
+		<varos>Miskolc</varos>
+		<nyitvatartas>
+			<tol>10</tol>
+			<ig>16</ig>
+		</nyitvatartas>
+		<dolgozok_szama>8</dolgozok_szama>
+		<videojatek jatekKulcs="001"></videojatek>
+		<videojatek jatekKulcs="002"></videojatek>
+		<videojatek jatekKulcs="004"></videojatek>
+	</bolt>
+	
+	<bolt bid="202">
+		<varos>Szeged</varos>
+		<nyitvatartas>
+			<tol>8</tol>
+			<ig>20</ig>
+		</nyitvatartas>
+		<dolgozok_szama>15</dolgozok_szama>
+		<videojatek jatekKulcs="001"></videojatek>
+		<videojatek jatekKulcs="002"></videojatek>
+		<videojatek jatekKulcs="003"></videojatek>
+		<videojatek jatekKulcs="005"></videojatek>
+	</bolt>
+	
+	<bolt bid="203">
+		<varos>Budapest</varos>
+		<nyitvatartas>
+			<tol>0</tol>
+			<ig>24</ig>
+		</nyitvatartas>
+		<dolgozok_szama>25</dolgozok_szama>
+		<videojatek jatekKulcs="001"></videojatek>
+		<videojatek jatekKulcs="002"></videojatek>
+		<videojatek jatekKulcs="003"></videojatek>
+		<videojatek jatekKulcs="004"></videojatek>
+		<videojatek jatekKulcs="005"></videojatek>
+	</bolt>
+	
+	
+	<bolt bid="204">
+		<varos>Miskolc</varos>
+		<nyitvatartas>
+			<tol>9</tol>
+			<ig>19</ig>
+		</nyitvatartas>
+		<dolgozok_szama>13</dolgozok_szama>
+		<videojatek jatekKulcs="001"></videojatek>
+		<videojatek jatekKulcs="003"></videojatek>
+		<videojatek jatekKulcs="004"></videojatek>
+		<videojatek jatekKulcs="005"></videojatek>
+	</bolt>
+	
+	<bolt bid="205">
+		<varos>Budapest</varos>
+		<nyitvatartas>
+			<tol>8</tol>
+			<ig>20</ig>
+		</nyitvatartas>
+		<dolgozok_szama>17</dolgozok_szama>
+		<videojatek jatekKulcs="001"></videojatek>
+		<videojatek jatekKulcs="002"></videojatek>
+		<videojatek jatekKulcs="004"></videojatek>
+		<videojatek jatekKulcs="005"></videojatek>
+	</bolt>
+	
+	
+	<vasarlas pid="301" vevoid="102">
+		<termek jatekKulcs="001"></termek>
+		<osszeg>20000</osszeg>
+		<atveteli_mod>Posta</atveteli_mod>
+		<datum>2020.11.12</datum>
+	</vasarlas>
+	
+	<vasarlas pid="302" vevoid="102">
+		<termek jatekKulcs="002"></termek>
+		<termek jatekKulcs="003"></termek>
+		<osszeg>17000</osszeg>
+		<atveteli_mod>Posta</atveteli_mod>
+		<datum>2020.11.03.</datum>
+	</vasarlas>
+
+	<vasarlas pid="303" vevoid="104">
+		<termek jatekKulcs="002"></termek>
+		<osszeg>10000</osszeg>
+		<atveteli_mod>Posta</atveteli_mod>
+		<datum>2020.03.18.</datum>
+	</vasarlas>
+
+	<vasarlas pid="304" vevoid="105">
+		<termek jatekKulcs="001"></termek>
+		<termek jatekKulcs="002"></termek>
+		<termek jatekKulcs="003"></termek>
+		<termek jatekKulcs="004"></termek>
+		<termek jatekKulcs="005"></termek>
+		<osszeg>72000</osszeg>
+		<atveteli_mod>Kézben</atveteli_mod>
+		<datum>2020.12.23.</datum>
+	</vasarlas>
+
+	<vasarlas pid="305" vevoid="103">
+		<termek jatekKulcs="001"></termek>
+		<osszeg>14000</osszeg>
+		<atveteli_mod>Kézben</atveteli_mod>
+		<datum>2020.11.24.</datum>
+	</vasarlas>
+
+
+</videojatekaruhaz>
